@@ -1,8 +1,9 @@
 import { takeLatest, delay, put } from 'redux-saga/effects';
 
 export function* onIncrement() {
-  yield console.log('I am incremented');
-  yield delay(3000);
+  let delayTime = 0;
+  yield console.log(`I will be incremente in: ${delayTime}ms`);
+  yield delay(delayTime);
   yield put({ type: 'INCREMENT_FROM_SAGA' });
 }
 
